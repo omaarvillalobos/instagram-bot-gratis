@@ -1,0 +1,20 @@
+name = "instagram-bot-gratis"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+GRAPH_VERSION = "v23.0"
+# "si" contesta el comentario en público con el texto respuestaPublica; "no" lo apaga.
+RESPONDER_COMENTARIO = "si"
+
+# La memoria del bot (quién pidió qué). Crea la tuya con:
+#   npx wrangler kv namespace create KV
+# y pega aquí el id que te da.
+[[kv_namespaces]]
+binding = "KV"
+id = "PEGA_AQUI_EL_ID_DE_TU_KV"
+
+# Secretos: NUNCA van en este archivo. Se guardan en Cloudflare con:
+#   npx wrangler secret put IG_TOKEN       (la llave de Instagram de tu cuenta)
+#   npx wrangler secret put APP_SECRET     (la clave secreta de tu app de Instagram en Meta)
+#   npx wrangler secret put VERIFY_TOKEN   (una palabra larga que tú inventas; la misma va en Meta)

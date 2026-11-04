@@ -1,0 +1,15 @@
+{
+  "name": "instagram-bot-gratis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Comenta una palabra y te llega el link por mensaje privado. Gratis, con la API oficial de Instagram y Cloudflare.",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "logs": "wrangler tail",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
